@@ -1,11 +1,27 @@
 import React from "react";
 import styled from "styled-components";
+import FooterSection from "./FooterStyled";
+
+const Section = styled(FooterSection)`
+  margin-right: 120px;
+`;
 
 const Information = () => {
   return (
-    <>
-      <h1>This is Information</h1>
-    </>
+    <Section>
+      <h2 className="section-title">資訊</h2>
+      <div className="section-content">
+        <a className="page-link" href="#">
+          隱私權政策
+        </a>
+        <a className="page-link" href="#">
+          Cookie
+        </a>
+        <a className="page-link" href="#">
+          GDPR
+        </a>
+      </div>
+    </Section>
   );
 };
 

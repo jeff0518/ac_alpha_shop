@@ -9,20 +9,24 @@ import styled from "styled-components";
 import './sass/BaseStyled.css';
 
 const BaseStyled = styled.div`
-  
+  margin: 0 auto;
+  width: 88%;
+
 `;
 
 function App() {
   return (
-    <BaseStyled>
-      <Header />
-      <StepProgress />
-      <Step1 />
-      {/* <Step2 /> */}
-      {/* <Step3 /> */}
-      <ProgressControl />
-      <Footer />
-    </BaseStyled>
+    <>
+      <BaseStyled>
+        <Header />
+        <StepProgress />
+        <Step1 />
+        {/* <Step2 /> */}
+        {/* <Step3 /> */}
+        <ProgressControl />
+        <Footer />
+      </BaseStyled>
+    </>
   );
 }
 
