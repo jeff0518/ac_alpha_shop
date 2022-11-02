@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import StepProgress from "./components/Steps/StepProgress";
+import Step1 from "./components/Steps/Step1";
+import Step2 from "./components/Steps/Step2";
+import Step3 from "./components/Steps/Step3";
+import ProgressControl from "./components/Steps/ProgressControl";
+import Footer from "./components/Footer/Footer";
+import styled from "styled-components";
+import './sass/BaseStyled.css';
+
+const BaseStyled = styled.div`
+  
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BaseStyled>
+      <Header />
+      <StepProgress />
+      <Step1 />
+      {/* <Step2 /> */}
+      {/* <Step3 /> */}
+      <ProgressControl />
+      <Footer />
+    </BaseStyled>
   );
 }
 
