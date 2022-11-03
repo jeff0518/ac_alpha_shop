@@ -4,7 +4,6 @@ import FooterSection from "./FooterStyled";
 
 const Section = styled(FooterSection)`
   margin-right: 120px;
-  margin-left: 109px;
 `;
 
 const CustomerService = () => {

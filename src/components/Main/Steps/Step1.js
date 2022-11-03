@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import "../../sass/BaseStyled.css";
+import "../../../sass/BaseStyled.css";
 
 const StepContent = styled.div`
   margin-top: 64px;

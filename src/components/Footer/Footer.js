@@ -8,24 +8,45 @@ import Logo from "../Header/Logo";
 import '../../sass/BaseStyled.css'
 
 const StyledFooter = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--footer-background-color);
   height: 284px;
   max-width: 1440px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  .container {
+    width: var(--width);
+    display: flex;
+
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 64px;
+    padding-left: 109px;
+  }
 `;
 
 const Footer = () => {
   return (
     <StyledFooter>
-      <Logo />
-      <CustomerService />
-      <AboutUs />
-      <Information />
-      <Track />
+      <div className="container">
+        <div className="logo">
+          <Logo />
+        </div>
+        <div className="content">
+          <CustomerService />
+          <AboutUs />
+          <Information />
+          <Track />
+        </div>
+      </div>
     </StyledFooter>
   );
 };
