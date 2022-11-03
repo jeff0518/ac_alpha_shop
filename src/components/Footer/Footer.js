@@ -14,6 +14,7 @@ const StyledFooter = styled.div`
   display: flex;
   justify-content: center;
   .container {
+    /* 為了讓footer的背景色是完整寬度，以及配合主畫面內縮，所以使用變數的方式 */
     width: var(--width);
     display: flex;
 
@@ -21,7 +22,6 @@ const StyledFooter = styled.div`
   .logo {
     display: flex;
     align-items: center;
-
   }
 
   .content {

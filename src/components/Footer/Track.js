@@ -4,7 +4,7 @@ import FooterSection from "./FooterStyled";
 import SocialMedia from "../icons/SocialMediaIcon.svg";
 
 const Section = styled(FooterSection)`
-  margin-right: 120px;
+  width: 199px;
 `;
 
 const Track = () => {

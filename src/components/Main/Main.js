@@ -5,6 +5,7 @@ import StepProgress from './Steps/StepProgress'
 import ProgressControl from './Steps/ProgressControl'
 import Cart from "./cart/cart";
 
+// 使用grid排版
 const MainStyled = styled.main`
   margin-top: 140px;
   display: grid;
@@ -16,7 +17,7 @@ const MainStyled = styled.main`
   }
 
   .right-Container {
-    grid-column: 8 / 12;
+    grid-column: 7 / 12;
   }
 `;
 

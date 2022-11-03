@@ -26,7 +26,7 @@ const ProductContainer = styled.div`
       width: 158px;
       height: 27px;
       margin-bottom: 18px;
-      color: var(--grey-800);
+      color: var(--main-text);
     }
 
     .product-control {

@@ -4,7 +4,7 @@ import '../../../sass/BaseStyled.css'
 
 const Control = styled.div`
   width: 540px;
-  border-top: 2px solid #e6e6eb;
+  border-top: 2px solid var(--main-line);
   margin-top: 48px;
 
   .buttonGroup__shipping,

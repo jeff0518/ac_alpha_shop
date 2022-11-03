@@ -6,11 +6,11 @@ import styled from "styled-components";
 import "../../sass/BaseStyled.css";
 
 const IconLists = styled.div`
-  ul {
+  .nav-list {
     display: flex;
     margin-left: 338px;
 
-    li {
+    .nav-item {
       list-style: none;
       margin-right: 32px;
       a {
@@ -23,7 +23,7 @@ const IconLists = styled.div`
 const Icon = () => {
   return (
     <IconLists>
-      <ul class="nav-list site-action-list">
+      <ul class="nav-list">
         {/* <!-- search --> */}
         <li class="nav-item">
           <a href="#">

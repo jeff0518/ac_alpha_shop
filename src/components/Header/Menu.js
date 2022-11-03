@@ -3,11 +3,11 @@ import styled from "styled-components";
 import '../../sass/BaseStyled.css'
 
 const Nav = styled.nav`
-  ul {
+  .nav-list {
     display: flex;
     margin-right: 52px;
 
-    li {
+    .nav-item {
       list-style: none;
       margin-right: 32px;
       font-weight: 500;
@@ -30,7 +30,7 @@ const Menu = () => {
   return (
     <Nav>
       <ul className="nav-list">
-        <li className="nav-item nav-item-twoWord">
+        <li className="nav-item">
           <a className="nav-link" href="#">
             男款
           </a>

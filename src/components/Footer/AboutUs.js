@@ -4,6 +4,7 @@ import FooterSection from "./FooterStyled";
 
 const Section = styled(FooterSection)`
   margin-right: 120px;
+  width: 96px;
 `;
 
 const AboutUs = () => {

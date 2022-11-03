@@ -10,6 +10,7 @@ const StepProgressContainer = styled.div`
     font-weight: 700;
     font-size: 32px;
     line-height: 38px;
+    color: var(--main-text);
   }
 
   .div {
@@ -25,19 +26,24 @@ const StepProgressContainer = styled.div`
       margin: auto 0;
     }
 
-    .progressContainer {
+    .progress-container {
       display: flex;
 
-      .progressIcon {
+      .progress-icon {
         .text {
           font-weight: 400;
           line-height: 24px;
         }
       }
 
-      .progressLabel {
+      .progress-label {
         width: 64px;
         height: 24px;
+        color: var(--main-text);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 8px;
       }
     }
   }
@@ -48,31 +54,31 @@ const StepProgress = () => {
     <StepProgressContainer>
       <h2>結帳</h2>
       <div className="div">
-        <section className="progressContainer">
-          <span className="progressIcon">
+        <section className="progress-container">
+          <span className="progress-icon">
             <span className="text">
-              <img src={baselineCheck} alt="" className="progressIcon-img" />
+              <img src={baselineCheck} alt="" className="progress-icon-img" />
             </span>
           </span>
-          <span className="progressLabel">寄送地址</span>
+          <span className="progress-label">寄送地址</span>
         </section>
         <div className="line" />
-        <section className="progressContainer">
-          <span className="progressIcon">
+        <section className="progress-container">
+          <span className="progress-icon">
             <span className="text">
-              <img src={Number2} alt="" className="progressIcon-img" />
+              <img src={Number2} alt="" className="progress-icon-img" />
             </span>
           </span>
-          <span className="progressLabel">運送方式</span>
+          <span className="progress-label">運送方式</span>
         </section>
         <div className="line" />
-        <section className="progressContainer">
-          <span className="progressIcon">
+        <section className="progress-container">
+          <span className="progress-icon">
             <span className="text">
-              <img src={Number3} alt="" className="progressIcon-img" />
+              <img src={Number3} alt="" className="progress-icon-img" />
             </span>
           </span>
-          <span className="progressLabel">付款資訊</span>
+          <span className="progress-label">付款資訊</span>
         </section>
       </div>
     </StepProgressContainer>

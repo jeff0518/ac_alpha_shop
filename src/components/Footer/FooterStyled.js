@@ -10,7 +10,7 @@ const FooterSection = styled.section`
     font-weight: 700;
     font-size: 24px;
     line-height: 24px;
-    color: var(--nav-icon);
+    color: var(--main-text);
     margin-bottom: 24px;
   }
   .section-content {

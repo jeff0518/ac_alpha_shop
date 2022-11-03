@@ -11,29 +11,45 @@ const StepContent = styled.div`
     flex-direction: column;
     align-items: flex-start;
 
-    .formTitle {
+    .form-title {
       font-weight: 700;
       font-size: 24px;
       line-height: 24px;
+      color: var(--main-text);
     }
 
     section {
-      .firstRow,
-      .secondRow,
-      .thirdRow {
+      .first-row,
+      .second-row,
+      .third-row {
         display: flex;
       }
 
-      div.inputGroup {
-        .inputLabel {
+      div.input-group {
+        .input-label {
+          margin-top: 24px;
           margin-bottom: 8px;
           font-weight: 700;
           font-size: 12px;
           line-height: 16px;
-          margin-top: 24px;
+          color: var(--input-label);
         }
 
-        input {
+        .input-group-input {
+          margin: 8px 30px 0 0;
+          padding-left: 16px;
+          width: 255px;
+          height: 40px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          color: var(--input-text);
+          border-radius: 4px;
+          border: 1px solid #5e5e5e;
+          border-radius: 4px;
+        }
+
+        .input {
           padding: 0;
           margin-top: 8px;
           width: 350px;
@@ -41,20 +57,28 @@ const StepContent = styled.div`
           border-radius: 4px;
           border: 1px solid #5e5e5e;
         }
-        .inputGroupInput {
-          margin: 8px 30px 0 0;
-          width: 255px;
-          height: 40px;
-          border-radius: 4px;
-        }
 
-        .selectContainer {
+        .select-container {
           select {
             margin: 8px 30px 0 0;
+            padding-left: 16px;
             width: 160px;
             height: 40px;
             border-radius: 4px;
             border: 1px solid #5e5e5e;
+            color: var(--input-text);
+            background-color: var(--background-color);
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+
+            option {
+              color: var(--input-text);
+              background-color: var(--background-color);
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+            }
           }
         }
       }
@@ -66,12 +90,12 @@ const Step1 = () => {
   return (
     <StepContent>
       <form data-phase="address">
-        <h3 className="formTitle">寄送地址</h3>
+        <h3 className="form-title">寄送地址</h3>
         <section>
-          <div className="firstRow">
-            <div className="inputGroup">
-              <div className="inputLabel">稱謂</div>
-              <div className="selectContainer">
+          <div className="first-row">
+            <div className="input-group">
+              <div className="input-label">稱謂</div>
+              <div className="select-container">
                 <select>
                   <option value="mr" selected>
                     先生
@@ -81,33 +105,37 @@ const Step1 = () => {
                 </select>
               </div>
             </div>
-            <div className="inputGroup">
-              <div className="inputLabel">姓名</div>
-              <input type="text" placeholder="請輸入姓名" />
+            <div className="input-group">
+              <div className="input-label">姓名</div>
+              <input
+                className="input input-group-input"
+                type="text"
+                placeholder="請輸入姓名"
+              />
             </div>
           </div>
-          <div className="secondRow">
-            <div className="inputGroup">
-              <div className="inputLabel">電話</div>
+          <div className="second-row">
+            <div className="input-group">
+              <div className="input-label">電話</div>
               <input
-                className="inputGroupInput"
+                className="input-group-input"
                 type="tel"
                 placeholder="請輸入行動電話"
               />
             </div>
-            <div className="inputGroup">
-              <div className="inputLabel">Email</div>
+            <div className="input-group">
+              <div className="input-label">Email</div>
               <input
-                className="inputGroupInput"
+                className="input-group-input"
                 type="email"
                 placeholder="請輸入電子郵件"
               />
             </div>
           </div>
-          <div className="thirdRow">
-            <div className="inputGroup">
-              <div className="inputLabel">縣市</div>
-              <div className="selectContainer">
+          <div className="third-row">
+            <div className="input-group">
+              <div className="input-label">縣市</div>
+              <div className="select-container">
                 <select required>
                   <option value="">請選擇縣市</option>
                   <option value="KLU">基隆市</option>
@@ -142,9 +170,13 @@ const Step1 = () => {
                 </select>
               </div>
             </div>
-            <div className="inputGroup">
-              <div className="inputLabel">地址</div>
-              <input type="text" placeholder="請輸入地址" />
+            <div className="input-group">
+              <div className="input-label">地址</div>
+              <input
+                className="input-group-input input"
+                type="text"
+                placeholder="請輸入地址"
+              />
             </div>
           </div>
         </section>

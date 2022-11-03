@@ -7,7 +7,11 @@ import Straight from "../../icons/Straight.svg";
 const SectionCart = styled.section`
   width: 440px;
   height: 492px;
+  background: #ffffff;
+  border: 1px solid #f0f0f5;
+  border-radius: 8px;
   margin-top: 86px;
+  padding: 32px 24px;
 
   .cart-info {
     width: 392px;
@@ -36,12 +40,18 @@ const PRODUCTS = [
 ];
 
 const Cart = () => {
+  // 為了計算價錢
+  let count = 0
   return (
     <SectionCart>
       <h3 className="cart-title">購物籃</h3>
       <section>
-        {PRODUCTS.map(e => {
-          return <Product key={e.id} price={e.price} image={e.image} name={e.name} />;
+        {/* 因為格式都一樣只有文字跟圖片不同，所以用渲染的方式 */}
+        {PRODUCTS.map((e) => {
+          count += e.price
+          return (
+            <Product key={e.id} price={e.price} image={e.image} name={e.name} />
+          );
         })}
       </section>
       <section className="cart-info shipping">
@@ -50,7 +60,7 @@ const Cart = () => {
       </section>
       <section className="cart-info total">
         <div className="text">小計</div>
-        <div className="price">$5,298</div>
+        <div className="price">${count}</div>
       </section>
     </SectionCart>
   );
