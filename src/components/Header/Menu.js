@@ -5,7 +5,6 @@ import '../../sass/BaseStyled.css'
 const Nav = styled.nav`
   .nav-list {
     display: flex;
-    margin-right: 52px;
 
     .nav-item {
       list-style: none;

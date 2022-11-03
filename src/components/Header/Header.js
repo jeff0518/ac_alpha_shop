@@ -7,19 +7,39 @@ import styled from "styled-components";
 
 const Div = styled.div`
   width: 100%;
-  max-width: 1440px;
   height: 60px;
-  display: flex;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 92.5px);
+  grid-gap: 30px;
   align-items: center;
   justify-content: space-between;
+
+  .header-left {
+    grid-column: 1 / 5;
+  }
+
+  .header-middle {
+    grid-column: 5 / 9;
+  }
+
+  .header-right {
+    grid-column: 9 / 10;
+  }
 `;
 
 const Header = () => {
   return (
     <Div>
-      <Menu />
-      <Logo />
-      <Icon />
+      <div className="header-left">
+        <Menu />
+      </div>
+      <div className="header-middle">
+        <Logo />
+      </div>
+      <div className="header-right">
+        <Icon />
+      </div>
     </Div>
   );
 };

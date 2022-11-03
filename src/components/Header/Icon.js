@@ -6,10 +6,11 @@ import styled from "styled-components";
 import "../../sass/BaseStyled.css";
 
 const IconLists = styled.div`
+  display: flex;
+  flex-direction: column;
+  /* margin-left: 338px; */
   .nav-list {
     display: flex;
-    margin-left: 338px;
-
     .nav-item {
       list-style: none;
       margin-right: 32px;

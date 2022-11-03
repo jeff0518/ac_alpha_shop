@@ -7,7 +7,7 @@ import Cart from "./cart/cart";
 
 // 使用grid排版
 const MainStyled = styled.main`
-  margin-top: 140px;
+  margin: 140px auto 0 auto;
   display: grid;
   grid-template-columns: repeat(12, 92.5px);
   grid-gap: 30px;
