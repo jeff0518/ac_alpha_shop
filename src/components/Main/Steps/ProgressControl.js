@@ -42,21 +42,21 @@ const ProgressControl = () => {
   return (
     <Control>
       <section className="buttonGroup" data-phase="address">
-        <button class="next next1">下一步</button>
+        <button className="next next1">下一步</button>
       </section>
       <section
         className="buttonGroup buttonGroup__shipping"
         data-phase="shipping"
       >
-        <button class="prev">上一步</button>
-        <button class="next">下一步</button>
+        <button className="prev">上一步</button>
+        <button className="next">下一步</button>
       </section>
       <section
         className="buttonGroup buttonGroup__creditCard"
         data-phase="credit-card"
       >
-        <button class="prev">上一步</button>
-        <button class="next">確認下單</button>
+        <button className="prev">上一步</button>
+        <button className="next">確認下單</button>
       </section>
     </Control>
   );

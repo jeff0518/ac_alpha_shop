@@ -24,20 +24,20 @@ const IconLists = styled.div`
 const Icon = () => {
   return (
     <IconLists>
-      <ul class="nav-list">
+      <ul className="nav-list">
         {/* <!-- search --> */}
-        <li class="nav-item">
+        <li className="nav-item">
           <a href="#">
             <img src={search} className="search" alt="search" />
           </a>
         </li>
         {/* <!-- cart --> */}
-        <li class="nav-item">
+        <li className="nav-item">
           <a href="#">
             <img src={cart} className="cart" alt="cart" />
           </a>
         </li>
-        <li id="theme-toggle" class="nav-item">
+        <li id="theme-toggle" className="nav-item">
           {/* <!-- moon -->             */}
           <a href="#">
             <img src={moon} className="moon" alt="moon" />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Step1 from './Steps/Step1'
 import StepProgress from './Steps/StepProgress'
 import ProgressControl from './Steps/ProgressControl'
-import Cart from "./cart/cart";
+import Cart from "./Cart/Cart";
 
 // 使用grid排版
 const MainStyled = styled.main`

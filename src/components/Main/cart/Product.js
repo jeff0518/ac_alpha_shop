@@ -60,7 +60,7 @@ const Product = (props) => {
   return (
     <ProductContainer data-count="0" data-price="3999">
       <img className="img-container" src={props.image} />
-      <div class="product-info">
+      <div className="product-info">
         <div className="product-name">{props.name}</div>
         {/* <div className="product-control-container"> */}
         <div className="product-control">

@@ -1,4 +1,4 @@
-import Cart from "./components/Main/cart/cart";
+import Cart from "./components/Main/Cart/Cart";
 import styled from "styled-components"
 
 
