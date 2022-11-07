@@ -71,7 +71,7 @@ const Cart = () => {
       <section>
         {/* 因為格式都一樣只有文字跟圖片不同，所以用渲染的方式 */}
         {PRODUCTS.map((e) => {
-          count += e.price
+          count += e.price * e.quantity; 
           return (
             <Product
               key={e.id}
