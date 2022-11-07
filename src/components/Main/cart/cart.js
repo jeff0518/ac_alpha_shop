@@ -24,22 +24,43 @@ const SectionCart = styled.section`
     border-top: 1px solid var(--undone-progress-border);
     margin-top: 32px;
   }
+
+  @media (max-width: 1266px) {
+    margin-top: 0;
+  }
 `;
 
 const PRODUCTS = [
   {
-    id: 1,
-    name: "破壞補丁修身牛仔褲",
-    price: 3999,
-    image: Destroy,
+    id: "1",
+    name: "貓咪罐罐",
+    img: "https://picsum.photos/300/300?text=1",
+    price: 100,
+    quantity: 2,
   },
   {
-    id: 2,
-    name: "刷色直筒牛仔褲",
-    price: 1299,
-    image: Straight,
+    id: "2",
+    name: "貓咪干干",
+    img: "https://picsum.photos/300/300?text=2",
+    price: 200,
+    quantity: 1,
   },
 ];
+
+// const PRODUCTS = [
+//   {
+//     id: 1,
+//     name: "破壞補丁修身牛仔褲",
+//     price: 3999,
+//     image: Destroy,
+//   },
+//   {
+//     id: 2,
+//     name: "刷色直筒牛仔褲",
+//     price: 1299,
+//     image: Straight,
+//   },
+// ];
 
 const Cart = () => {
   // 為了計算價錢
@@ -52,7 +73,13 @@ const Cart = () => {
         {PRODUCTS.map((e) => {
           count += e.price
           return (
-            <Product key={e.id} price={e.price} image={e.image} name={e.name} />
+            <Product
+              key={e.id}
+              price={e.price}
+              image={e.img}
+              name={e.name}
+              quantity={e.quantity}
+            />
           );
         })}
       </section>

@@ -49,7 +49,7 @@ const StepProgressContainer = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     .div {
       width: 344px;
 

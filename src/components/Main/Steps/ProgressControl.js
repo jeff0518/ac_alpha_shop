@@ -51,6 +51,7 @@ const Control = styled.div`
       border: none;
     }
   }
+}
 `;
 
 const ProgressControl = () => {

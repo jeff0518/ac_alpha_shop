@@ -91,7 +91,7 @@ const Product = (props) => {
           <a className="product-action" href="#">
             <img src={IconMinus} alt="" className="minus" />
           </a>
-          <span className="product-count">1</span>
+          <span className="product-count">{props.quantity}</span>
           <a className="product-action" href="#">
             <img src={IconPlus} alt="" className="plus" />
           </a>

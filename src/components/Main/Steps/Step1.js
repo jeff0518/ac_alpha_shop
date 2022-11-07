@@ -85,17 +85,21 @@ const StepContent = styled.div`
     }
   }
 
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     margin-top: 16px;
     width: 100%;
     form {
       width: 346px;
 
       section {
-        .first-row,
+        .first-row {
+          display: flex;
+        }
+
         .second-row,
         .third-row {
           display: flex;
+          flex-direction: column;
         }
 
         div.input-group {
@@ -111,15 +115,7 @@ const StepContent = styled.div`
           .input-group-input {
             margin: 8px 30px 0 0;
             padding-left: 16px;
-            width: 255px;
-            height: 40px;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 16px;
-            color: var(--input-text);
-            border-radius: 4px;
-            border: 1px solid #5e5e5e;
-            border-radius: 4px;
+            width: 346px;
           }
 
           .input {
@@ -148,6 +144,9 @@ const StepContent = styled.div`
                 font-size: 12px;
                 line-height: 16px;
               }
+            }
+            .select-RWD {
+              width: 346px;
             }
           }
         }
@@ -204,7 +203,7 @@ const Step1 = () => {
             <div className="input-group">
               <div className="input-label">縣市</div>
               <div className="select-container">
-                <select required>
+                <select className="select-RWD" required>
                   <option value="">請選擇縣市</option>
                   <option value="KLU">基隆市</option>
                   <option value="TPH">新北市</option>
