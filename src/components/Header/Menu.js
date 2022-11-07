@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import '../../sass/BaseStyled.css'
+import "../../sass/BaseStyled.css";
 
 const Nav = styled.nav`
   .nav-list {
@@ -57,6 +57,6 @@ const Menu = () => {
       </ul>
     </Nav>
   );
-}
+};
 
-export default Menu
+export default Menu;

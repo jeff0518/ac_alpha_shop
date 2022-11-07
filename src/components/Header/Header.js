@@ -2,8 +2,8 @@ import React from "react";
 import Logo from "./Logo";
 import Menu from "./Menu";
 import Icon from "./Icon";
+import Hamburger from "./Hamburger";
 import styled from "styled-components";
-
 
 const Div = styled.div`
   width: 100%;
@@ -26,6 +26,32 @@ const Div = styled.div`
   .header-right {
     grid-column: 9 / 10;
   }
+
+  @media (max-width: 1200px) {
+    display: unset;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .header-middle {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media (max-width: 850px) {
+    all: unset;
+    padding: 0;
+    margin: 0;
+    .header-middle {
+      display: flex;
+      align-items: center;
+    }
+
+    .header-left,
+    .header-right {
+      transform: scale(0, 1);
+    }
+  }
 `;
 
 const Header = () => {
@@ -35,6 +61,7 @@ const Header = () => {
         <Menu />
       </div>
       <div className="header-middle">
+        <Hamburger />
         <Logo />
       </div>
       <div className="header-right">

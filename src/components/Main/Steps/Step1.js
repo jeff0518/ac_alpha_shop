@@ -4,9 +4,9 @@ import "../../../sass/BaseStyled.css";
 
 const StepContent = styled.div`
   margin-top: 64px;
-  width: 540px;
-
+  width: 100%;
   form {
+    width: 540px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -53,6 +53,7 @@ const StepContent = styled.div`
           padding: 0;
           margin-top: 8px;
           width: 350px;
+          /* width: 24.3%; */
           height: 40px;
           border-radius: 4px;
           border: 1px solid #5e5e5e;
@@ -71,13 +72,82 @@ const StepContent = styled.div`
             font-weight: 400;
             font-size: 12px;
             line-height: 16px;
-
             option {
               color: var(--input-text);
               background-color: var(--background-color);
               font-weight: 400;
               font-size: 12px;
               line-height: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 16px;
+    width: 100%;
+    form {
+      width: 346px;
+
+      section {
+        .first-row,
+        .second-row,
+        .third-row {
+          display: flex;
+        }
+
+        div.input-group {
+          .input-label {
+            margin-top: 24px;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 16px;
+            color: var(--input-label);
+          }
+
+          .input-group-input {
+            margin: 8px 30px 0 0;
+            padding-left: 16px;
+            width: 255px;
+            height: 40px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            color: var(--input-text);
+            border-radius: 4px;
+            border: 1px solid #5e5e5e;
+            border-radius: 4px;
+          }
+
+          .input {
+            padding: 0;
+            margin-top: 8px;
+            width: 350px;
+            /* width: 24.3%; */
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #5e5e5e;
+          }
+
+          .input-rwd {
+            width: 183px;
+          }
+
+          .select-container {
+            select {
+              margin: 8px 30px 0 0;
+              padding-left: 16px;
+              width: 133px;
+              option {
+                color: var(--input-text);
+                background-color: var(--background-color);
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 16px;
+              }
             }
           }
         }
@@ -97,9 +167,7 @@ const Step1 = () => {
               <div className="input-label">稱謂</div>
               <div className="select-container">
                 <select>
-                  <option value="mr">
-                    先生
-                  </option>
+                  <option value="mr">先生</option>
                   <option value="ms">女士</option>
                   <option value="mx">不明</option>
                 </select>
@@ -108,7 +176,7 @@ const Step1 = () => {
             <div className="input-group">
               <div className="input-label">姓名</div>
               <input
-                className="input input-group-input"
+                className="input input-group-input input-rwd"
                 type="text"
                 placeholder="請輸入姓名"
               />
@@ -183,6 +251,6 @@ const Step1 = () => {
       </form>
     </StepContent>
   );
-}
+};
 
-export default Step1
+export default Step1;

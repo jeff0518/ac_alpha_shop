@@ -36,6 +36,21 @@ const Control = styled.div`
       line-height: 20px;
     }
   }
+
+  @media (max-width: 1266px) {
+  .buttonGroup {
+    justify-content: center;
+    
+    .next1 {
+      position: unset;
+      width: 345px;
+      color: #FFFFFF;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      border: none;
+    }
+  }
 `;
 
 const ProgressControl = () => {

@@ -17,7 +17,6 @@ const StyledFooter = styled.div`
     /* 為了讓footer的背景色是完整寬度，以及配合主畫面內縮，所以使用變數的方式 */
     width: var(--width);
     display: flex;
-
   }
   .logo {
     display: flex;
@@ -30,6 +29,10 @@ const StyledFooter = styled.div`
     align-items: flex-start;
     margin-top: 64px;
     padding-left: 109px;
+  }
+
+  @media (max-width: 1266px) {
+    display: none;
   }
 `;
 

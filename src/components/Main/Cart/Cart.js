@@ -5,16 +5,18 @@ import Destroy from "../../icons/Destroy.svg";
 import Straight from "../../icons/Straight.svg";
 
 const SectionCart = styled.section`
-  width: 440px;
+  max-width: 440px;
+  width: 100%;
   height: 492px;
   background: #ffffff;
   border: 1px solid #f0f0f5;
   border-radius: 8px;
   margin-top: 86px;
-  padding: 32px 24px;
+  padding: 7.2% 5.5%;
 
   .cart-info {
-    width: 392px;
+    max-width: 392px;
+    width: 100%;
     height: 37px;
     display: flex;
     align-items: flex-end;

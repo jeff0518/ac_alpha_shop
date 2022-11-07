@@ -6,6 +6,7 @@ import Number2 from "../../icons/Number2.svg";
 import Number3 from "../../icons/Number3.svg";
 
 const StepProgressContainer = styled.div`
+  width: 100%;
   h2 {
     font-weight: 700;
     font-size: 32px;
@@ -44,6 +45,31 @@ const StepProgressContainer = styled.div`
         font-size: 16px;
         line-height: 24px;
         margin-left: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    .div {
+      width: 344px;
+
+      .line {
+        background-color: #000000;
+      }
+
+      .progress-container {
+        display: flex;
+
+        .progress-icon {
+          .text {
+            font-weight: 400;
+            line-height: 24px;
+          }
+        }
+
+        .progress-label {
+          display: none;
+        }
       }
     }
   }

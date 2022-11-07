@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import IconPlus from '../../icons/IconPlus.svg'
-import IconMinus from '../../icons/IconMinus.svg'
-import '../../../sass/BaseStyled.css'
+import IconPlus from "../../icons/IconPlus.svg";
+import IconMinus from "../../icons/IconMinus.svg";
+import "../../../sass/BaseStyled.css";
 
 const ProductContainer = styled.div`
   width: 392px;
@@ -12,7 +12,7 @@ const ProductContainer = styled.div`
   margin-top: 34px;
 
   .img-container {
-    margin-right: 21px;
+    margin-right: 5.3%;
     width: 100px;
     height: 100px;
   }
@@ -42,6 +42,10 @@ const ProductContainer = styled.div`
         text-align: center;
       }
     }
+    .rwd-price {
+        display: none;
+      }
+    
   }
 
   .price {
@@ -53,8 +57,28 @@ const ProductContainer = styled.div`
     text-align: right;
     color: var(--product-action-text);
   }
-`;
 
+  @media (max-width: 496px) {
+    .product-info {
+      display: flex;
+      align-items: flex-end;
+
+      .product-name {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .rwd-price {
+        display: unset;
+        margin-top: 17px;
+      }
+    }
+
+    .price {
+      display: none;
+    }
+  }
+`;
 
 const Product = (props) => {
   return (
@@ -72,11 +96,12 @@ const Product = (props) => {
             <img src={IconPlus} alt="" className="plus" />
           </a>
         </div>
+        <div className="price rwd-price">{props.price}</div>
         {/* </div> */}
       </div>
       <div className="price">{props.price}</div>
     </ProductContainer>
   );
-}
+};
 
-export default Product
+export default Product;
