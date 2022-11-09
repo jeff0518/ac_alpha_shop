@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 import FooterSection from "./FooterStyled";
 
-const Section = styled(FooterSection)`
+const SectionAboutUs = styled(FooterSection)`
   margin-right: 120px;
   width: 96px;
 `;
 
 const AboutUs = () => {
   return (
-    <Section>
+    <SectionAboutUs>
       <h2 className="section-title">關於我們</h2>
       <div className="section-content">
         <a className="page-link" href="#">
@@ -22,7 +22,7 @@ const AboutUs = () => {
           Press kit
         </a>
       </div>
-    </Section>
+    </SectionAboutUs>
   );
 };
 

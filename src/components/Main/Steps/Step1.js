@@ -155,6 +155,41 @@ const StepContent = styled.div`
   }
 `;
 
+const city = [
+  { value: "", name: "請選擇縣市" },
+  { value: "KLU", name: "基隆市" },
+  { value: "TPH", name: "新北市" },
+  { value: "TPE", name: "臺北市" },
+  { value: "TYC", name: "桃園市" },
+  { value: "HSH", name: "新竹縣" },
+  { value: "HSC", name: "新竹市" },
+  { value: "MAC", name: "苗栗市" },
+  { value: "MAL", name: "苗栗縣" },
+  { value: "TXG", name: "臺中市" },
+  { value: "CWH", name: "彰化縣" },
+  { value: "CWS", name: "彰化市" },
+  { value: "NTC", name: "南投市" },
+  { value: "NTO", name: "南投縣" },
+  { value: "YLH", name: "雲林縣" },
+  { value: "CHY", name: "嘉義縣" },
+  { value: "CYI", name: "嘉義市" },
+  { value: "TNN", name: "臺南市" },
+  { value: "KHH", name: "嘉義市" },
+  { value: "CYI", name: "高雄市" },
+  { value: "IUH", name: "屏東縣" },
+  { value: "PTS", name: "屏東市" },
+  { value: "PTS", name: "屏東市" },
+  { value: "ILN", name: "宜蘭縣" },
+  { value: "ILC", name: "宜蘭市" },
+  { value: "HWA", name: "花蓮縣" },
+  { value: "HWC", name: "花蓮市" },
+  { value: "TTC", name: "臺東市" },
+  { value: "TTT", name: "臺東縣" },
+  { value: "PEH", name: "澎湖縣" },
+  { value: "KMN", name: "金門縣" },
+  { value: "LNN", name: "連江縣" },
+];
+
 const Step1 = () => {
   return (
     <StepContent>
@@ -204,7 +239,10 @@ const Step1 = () => {
               <div className="input-label">縣市</div>
               <div className="select-container">
                 <select className="select-RWD" required>
-                  <option value="">請選擇縣市</option>
+                  {city.map((e) => {
+                    return <option value={e.value}>{e.name}</option>;
+                  })}
+                  {/* <option value="">請選擇縣市</option>
                   <option value="KLU">基隆市</option>
                   <option value="TPH">新北市</option>
                   <option value="TPE">臺北市</option>
@@ -233,7 +271,7 @@ const Step1 = () => {
                   <option value="TTT">臺東縣</option>
                   <option value="PEH">澎湖縣</option>
                   <option value="KMN">金門縣</option>
-                  <option value="LNN">連江縣</option>
+                  <option value="LNN">連江縣</option> */}
                 </select>
               </div>
             </div>
