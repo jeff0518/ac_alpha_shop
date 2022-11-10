@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "../../../sass/BaseStyled.css";
 
-const StepProgressContainer = styled.div`
+const StyledStepProgressContainer = styled.div`
   width: 100%;
   h2 {
     font-weight: 700;
@@ -74,7 +74,7 @@ const StepProgressContainer = styled.div`
 
 const StepProgress = () => {
   return (
-    <StepProgressContainer>
+    <StyledStepProgressContainer>
       <h2>結帳</h2>
       <div className="div">
         <section className="progress-container">
@@ -116,7 +116,7 @@ const StepProgress = () => {
           <span className="progress-label">付款資訊</span>
         </section>
       </div>
-    </StepProgressContainer>
+    </StyledStepProgressContainer>
   );
 };
 

@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import '../../../sass/BaseStyled.css'
 
-const Control = styled.div`
+const StyledControl = styled.div`
   width: 540px;
   border-top: 2px solid var(--main-line);
   margin-top: 48px;
@@ -38,25 +38,25 @@ const Control = styled.div`
   }
 
   @media (max-width: 1266px) {
-  .buttonGroup {
-    justify-content: center;
-    
-    .next1 {
-      position: unset;
-      width: 345px;
-      color: #FFFFFF;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      border: none;
+    .buttonGroup {
+      justify-content: center;
+
+      .next1 {
+        position: unset;
+        width: 345px;
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        border: none;
+      }
     }
   }
-}
 `;
 
 const ProgressControl = () => {
   return (
-    <Control>
+    <StyledControl>
       <section className="buttonGroup" data-phase="address">
         <button className="next next1">下一步</button>
       </section>
@@ -74,7 +74,7 @@ const ProgressControl = () => {
         <button className="prev">上一步</button>
         <button className="next">確認下單</button>
       </section>
-    </Control>
+    </StyledControl>
   );
 }
 

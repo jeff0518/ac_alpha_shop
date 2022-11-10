@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "../../../sass/BaseStyled.css";
 
-const StepContent = styled.div`
+const StyledStepContent = styled.div`
   margin-top: 64px;
   width: 540px;
   form {
@@ -27,7 +27,7 @@ const StepContent = styled.div`
 
 const Step2 = () => {
   return (
-    <StepContent>
+    <StyledStepContent>
       <form data-phase="shipping">
         <h3 className="form-title">運送方式</h3>
         <section className="form-body">
@@ -60,7 +60,7 @@ const Step2 = () => {
           </label>
         </section>
       </form>
-    </StepContent>
+    </StyledStepContent>
   );
 };
 

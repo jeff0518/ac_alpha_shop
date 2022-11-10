@@ -5,7 +5,7 @@ import Icon from "./Icon";
 import Hamburger from "./Hamburger";
 import styled from "styled-components";
 
-const Div = styled.div`
+const StyledDiv = styled.div`
   width: 100%;
   height: 60px;
   margin: 0 auto;
@@ -56,7 +56,7 @@ const Div = styled.div`
 
 const Header = () => {
   return (
-    <Div>
+    <StyledDiv>
       <div className="header-left">
         <Menu />
       </div>
@@ -67,7 +67,7 @@ const Header = () => {
       <div className="header-right">
         <Icon />
       </div>
-    </Div>
+    </StyledDiv>
   );
 };
 

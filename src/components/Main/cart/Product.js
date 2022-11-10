@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import "../../../sass/BaseStyled.css";
 
-const ProductContainer = styled.div`
+const StyledProductContainer = styled.div`
   width: 392px;
   height: 102px;
   display: flex;
@@ -41,9 +41,8 @@ const ProductContainer = styled.div`
       }
     }
     .rwd-price {
-        display: none;
-      }
-    
+      display: none;
+    }
   }
 
   .price {
@@ -80,25 +79,25 @@ const ProductContainer = styled.div`
 
 const Product = (props) => {
   return (
-    <ProductContainer data-count="0" data-price="3999">
+    <StyledProductContainer data-count="0" data-price="3999">
       <img className="img-container" src={props.image} />
       <div className="product-info">
         <div className="product-name">{props.name}</div>
         {/* <div className="product-control-container"> */}
         <div className="product-control">
-          <a className="product-action" href="#">
+          <div className="product-action" href="#">
             <img src="icons/IconMinus.svg" alt="" className="minus" />
-          </a>
+          </div>
           <span className="product-count">{props.quantity}</span>
-          <a className="product-action" href="#">
+          <div className="product-action" href="#">
             <img src="/icons/IconPlus.svg" alt="" className="plus" />
-          </a>
+          </div>
         </div>
         <div className="price rwd-price">{props.price}</div>
         {/* </div> */}
       </div>
       <div className="price">{props.price}</div>
-    </ProductContainer>
+    </StyledProductContainer>
   );
 };
 

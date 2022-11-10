@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HamburgerStyle = styled.div`
+const StyledHamburger = styled.div`
   display: flex;
   align-items: center;
   margin-right: 20%;
@@ -16,7 +16,7 @@ const HamburgerStyle = styled.div`
 
 const Hamburger = () => {
   return (
-    <HamburgerStyle>
+    <StyledHamburger>
       <input type="checkbox" className="nav-toggle" id="nav-toggle" />
       {/* 不能用for 要用 htmlFor，不然會跳出error */}
       <label className="nav-toggle-label" htmlFor="nav-toggle">
@@ -26,7 +26,7 @@ const Hamburger = () => {
           className="hamburger"
         />
       </label>
-    </HamburgerStyle>
+    </StyledHamburger>
   );
 };
 

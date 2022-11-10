@@ -24,25 +24,25 @@ const Icon = () => {
       <ul className="nav-list">
         {/* <!-- search --> */}
         <li className="nav-item">
-          <a href="#">
+          <div href="#">
             <img
               src="/icons/IconSearch.svg"
               className="search"
               alt="search"
             />
-          </a>
+          </div>
         </li>
         {/* <!-- cart --> */}
         <li className="nav-item">
-          <a href="#">
+          <div href="#">
             <img src="/icons/iconCart.svg" className="cart" alt="cart" />
-          </a>
+          </div>
         </li>
         <li id="theme-toggle" className="nav-item">
           {/* <!-- moon -->             */}
-          <a href="#">
+          <div href="#">
             <img src="/icons/iconMoon.svg" className="moon" alt="moon" />
-          </a>
+          </div>
           {/* <!-- sun --> */}
         </li>
       </ul>

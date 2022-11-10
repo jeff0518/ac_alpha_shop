@@ -2,7 +2,7 @@ import React from "react";
 import Product from "./Product";
 import styled from "styled-components";
 
-const SectionCart = styled.section`
+const StyledSectionCart = styled.section`
   max-width: 440px;
   width: 100%;
   height: 492px;
@@ -64,7 +64,7 @@ const Cart = () => {
   // 為了計算價錢
   let count = 0
   return (
-    <SectionCart>
+    <StyledSectionCart>
       <h3 className="cart-title">購物籃</h3>
       <section>
         {/* 因為格式都一樣只有文字跟圖片不同，所以用渲染的方式 */}
@@ -89,7 +89,7 @@ const Cart = () => {
         <div className="text">小計</div>
         <div className="price">${count}</div>
       </section>
-    </SectionCart>
+    </StyledSectionCart>
   );
 }
 
