@@ -1,7 +1,4 @@
 import React from "react";
-import search from "../icons/IconSearch.svg";
-import cart from "../icons/iconCart.svg";
-import moon from "../icons/iconMoon.svg";
 import styled from "styled-components";
 import "../../sass/BaseStyled.css";
 
@@ -28,19 +25,23 @@ const Icon = () => {
         {/* <!-- search --> */}
         <li className="nav-item">
           <a href="#">
-            <img src={search} className="search" alt="search" />
+            <img
+              src="/icons/IconSearch.svg"
+              className="search"
+              alt="search"
+            />
           </a>
         </li>
         {/* <!-- cart --> */}
         <li className="nav-item">
           <a href="#">
-            <img src={cart} className="cart" alt="cart" />
+            <img src="/icons/iconCart.svg" className="cart" alt="cart" />
           </a>
         </li>
         <li id="theme-toggle" className="nav-item">
           {/* <!-- moon -->             */}
           <a href="#">
-            <img src={moon} className="moon" alt="moon" />
+            <img src="/icons/iconMoon.svg" className="moon" alt="moon" />
           </a>
           {/* <!-- sun --> */}
         </li>

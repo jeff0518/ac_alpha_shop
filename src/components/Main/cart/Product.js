@@ -1,7 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import IconPlus from "../../icons/IconPlus.svg";
-import IconMinus from "../../icons/IconMinus.svg";
 import "../../../sass/BaseStyled.css";
 
 const ProductContainer = styled.div`
@@ -89,11 +87,11 @@ const Product = (props) => {
         {/* <div className="product-control-container"> */}
         <div className="product-control">
           <a className="product-action" href="#">
-            <img src={IconMinus} alt="" className="minus" />
+            <img src="icons/IconMinus.svg" alt="" className="minus" />
           </a>
           <span className="product-count">{props.quantity}</span>
           <a className="product-action" href="#">
-            <img src={IconPlus} alt="" className="plus" />
+            <img src="/icons/IconPlus.svg" alt="" className="plus" />
           </a>
         </div>
         <div className="price rwd-price">{props.price}</div>

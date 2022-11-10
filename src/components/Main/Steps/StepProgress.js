@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import "../../../sass/BaseStyled.css";
-import baselineCheck from "../../icons/baselineCheck.svg";
-import Number2 from "../../icons/Number2.svg";
-import Number3 from "../../icons/Number3.svg";
 
 const StepProgressContainer = styled.div`
   width: 100%;
@@ -83,7 +80,11 @@ const StepProgress = () => {
         <section className="progress-container">
           <span className="progress-icon">
             <span className="text">
-              <img src={baselineCheck} alt="" className="progress-icon-img" />
+              <img
+                src="/icons/baselineCheck.svg"
+                alt=""
+                className="progress-icon-img"
+              />
             </span>
           </span>
           <span className="progress-label">寄送地址</span>
@@ -92,7 +93,11 @@ const StepProgress = () => {
         <section className="progress-container">
           <span className="progress-icon">
             <span className="text">
-              <img src={Number2} alt="" className="progress-icon-img" />
+              <img
+                src="/icons/Number2.svg"
+                alt=""
+                className="progress-icon-img"
+              />
             </span>
           </span>
           <span className="progress-label">運送方式</span>
@@ -101,7 +106,11 @@ const StepProgress = () => {
         <section className="progress-container">
           <span className="progress-icon">
             <span className="text">
-              <img src={Number3} alt="" className="progress-icon-img" />
+              <img
+                src="/icons/Number3.svg"
+                alt=""
+                className="progress-icon-img"
+              />
             </span>
           </span>
           <span className="progress-label">付款資訊</span>

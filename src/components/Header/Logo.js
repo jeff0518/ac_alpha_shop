@@ -1,15 +1,12 @@
-import logo from '../icons/Logologo.svg'
-
-
-
 const Logo = () => {
   return (
     <div>
-      <a href="#">
-        <img src={logo} className="logo" alt="logo" />
-      </a>
+      <div href="#">
+        <img src="/icons/Logologo.svg" className="logo" alt="logo" />
+        {/* <Icon className="logo" width="100px" heigh="100px" /> */}
+      </div>
     </div>
   );
-}
+};
 
-export default Logo
+export default Logo;

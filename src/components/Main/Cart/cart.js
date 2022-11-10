@@ -1,8 +1,6 @@
 import React from "react";
 import Product from "./Product";
 import styled from "styled-components";
-import Destroy from "../../icons/Destroy.svg";
-import Straight from "../../icons/Straight.svg";
 
 const SectionCart = styled.section`
   max-width: 440px;
@@ -52,13 +50,13 @@ const PRODUCTS = [
 //     id: 1,
 //     name: "破壞補丁修身牛仔褲",
 //     price: 3999,
-//     image: Destroy,
+//     image: "/icons/Destroy.svg",
 //   },
 //   {
 //     id: 2,
 //     name: "刷色直筒牛仔褲",
 //     price: 1299,
-//     image: Straight,
+//     image: "/icons/Straight.svg",
 //   },
 // ];
 

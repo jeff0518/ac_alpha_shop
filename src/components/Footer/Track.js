@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import FooterSection from "./FooterStyled";
-import SocialMedia from "../icons/SocialMediaIcon.svg";
+
 
 const Section = styled(FooterSection)`
   width: 199px;
@@ -17,7 +17,11 @@ const Track = () => {
         </a>
         <div>
           <a className="page-link" href="#">
-            <img src={SocialMedia} className="page-link-app" alt="App" />
+            <img
+              src="/icons/SocialMediaIcon.svg"
+              className="page-link-app"
+              alt="App"
+            />
           </a>
         </div>
       </div>

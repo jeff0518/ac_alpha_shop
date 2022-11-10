@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import hamburgerIcon from "../icons/Hamburger.svg";
 
 const HamburgerStyle = styled.div`
   display: flex;
@@ -21,7 +20,11 @@ const Hamburger = () => {
       <input type="checkbox" className="nav-toggle" id="nav-toggle" />
       {/* 不能用for 要用 htmlFor，不然會跳出error */}
       <label className="nav-toggle-label" htmlFor="nav-toggle">
-        <img src={hamburgerIcon} alt="nav-hamburger" className="hamburger" />
+        <img
+          src="/icons/Hamburger.svg"
+          alt="nav-hamburger"
+          className="hamburger"
+        />
       </label>
     </HamburgerStyle>
   );
