@@ -6,11 +6,9 @@ const StyledControl = styled.div`
   width: 540px;
   border-top: 2px solid var(--main-line);
   margin-top: 48px;
-
-  .buttonGroup__shipping,
-  .buttonGroup__creditCard {
-    /* transform: scale(0, 1); */
-  }
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
 
   .buttonGroup {
     display: flex;
@@ -34,12 +32,21 @@ const StyledControl = styled.div`
       font-weight: 400;
       font-size: 14px;
       line-height: 20px;
+      border: none;
+      background-color: var(--white);
     }
   }
 
   @media (max-width: 1266px) {
     .buttonGroup {
       justify-content: center;
+      .next {
+        width: 156px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        border: none;
+      }
 
       .next1 {
         position: unset;
@@ -49,6 +56,13 @@ const StyledControl = styled.div`
         font-size: 14px;
         line-height: 17px;
         border: none;
+      }
+
+      .prev {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 200px;
       }
     }
   }
@@ -70,7 +84,7 @@ const ProgressControl = ({ step, setStep }) => {
       {step === 1 && (
         <section className="buttonGroup" data-phase="address">
           <button className="next next1" onClick={handleSetStepPlus}>
-            下一步
+            下一步 →
           </button>
         </section>
       )}
@@ -81,10 +95,10 @@ const ProgressControl = ({ step, setStep }) => {
           data-phase="shipping"
         >
           <button className="prev" onClick={handleSetStepMinus}>
-            上一步
+            ← 上一步
           </button>
           <button className="next" onClick={handleSetStepPlus}>
-            下一步
+            下一步 →
           </button>
         </section>
       )}
@@ -95,7 +109,7 @@ const ProgressControl = ({ step, setStep }) => {
           data-phase="credit-card"
         >
           <button className="prev" onClick={handleSetStepMinus}>
-            上一步
+            ← 上一步
           </button>
           <button className="next">確認下單</button>
         </section>

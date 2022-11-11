@@ -20,7 +20,7 @@ const StyledStepProgressContainer = styled.div`
     .line {
       width: 60px;
       height: 1px;
-      background-color: var(--left-arrow);
+      background-color: var(--product-action-text);
       margin: auto 0;
     }
 

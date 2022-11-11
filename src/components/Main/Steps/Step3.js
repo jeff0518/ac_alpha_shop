@@ -41,6 +41,19 @@ const StyledStepContent = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    form {
+      .form-body {
+        .verify-data {
+          .input-group {
+            input {
+              width: 158px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 const Step3 = () => {
@@ -75,6 +88,6 @@ const Step3 = () => {
       </form>
     </StyledStepContent>
   );
-}
+};
 
-export default Step3
+export default Step3;

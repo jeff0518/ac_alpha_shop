@@ -81,14 +81,14 @@ const Main = () => {
       </MainStyled>
       <MainRWDStyled>
         <div className="step-container">
-          <StepProgress />
+          <StepProgress step={step} />
           <From step={step} />
         </div>
         <div className="cart-container">
           <Cart />
         </div>
         <div className="button">
-          <ProgressControl step={setStep} />
+          <ProgressControl step={step} setStep={setStep} />
         </div>
       </MainRWDStyled>
     </>
