@@ -156,7 +156,7 @@ const StyledStepContent = styled.div`
 `;
 
 const city = [
-  { value: "", name: "請選擇縣市" },
+  { value: null, name: "請選擇縣市" },
   { value: "KLU", name: "基隆市" },
   { value: "TPH", name: "新北市" },
   { value: "TPE", name: "臺北市" },

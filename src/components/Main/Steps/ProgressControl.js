@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import '../../../sass/BaseStyled.css'
+import "../../../sass/BaseStyled.css";
 
 const StyledControl = styled.div`
   width: 540px;
@@ -9,7 +9,7 @@ const StyledControl = styled.div`
 
   .buttonGroup__shipping,
   .buttonGroup__creditCard {
-    transform: scale(0, 1);
+    /* transform: scale(0, 1); */
   }
 
   .buttonGroup {
@@ -54,28 +54,54 @@ const StyledControl = styled.div`
   }
 `;
 
-const ProgressControl = () => {
+const ProgressControl = ({ step, setStep }) => {
+  
+  const handleSetStepPlus = () => {
+    setStep((step) => step + 1);
+  };
+
+  const handleSetStepMinus = () => {
+    setStep((step) => step - 1);
+  };
+
+
   return (
     <StyledControl>
-      <section className="buttonGroup" data-phase="address">
-        <button className="next next1">下一步</button>
-      </section>
-      <section
-        className="buttonGroup buttonGroup__shipping"
-        data-phase="shipping"
-      >
-        <button className="prev">上一步</button>
-        <button className="next">下一步</button>
-      </section>
-      <section
-        className="buttonGroup buttonGroup__creditCard"
-        data-phase="credit-card"
-      >
-        <button className="prev">上一步</button>
-        <button className="next">確認下單</button>
-      </section>
+      {step === 1 && (
+        <section className="buttonGroup" data-phase="address">
+          <button className="next next1" onClick={handleSetStepPlus}>
+            下一步
+          </button>
+        </section>
+      )}
+
+      {step === 2 && (
+        <section
+          className="buttonGroup buttonGroup__shipping"
+          data-phase="shipping"
+        >
+          <button className="prev" onClick={handleSetStepMinus}>
+            上一步
+          </button>
+          <button className="next" onClick={handleSetStepPlus}>
+            下一步
+          </button>
+        </section>
+      )}
+
+      {step === 3 && (
+        <section
+          className="buttonGroup buttonGroup__creditCard"
+          data-phase="credit-card"
+        >
+          <button className="prev" onClick={handleSetStepMinus}>
+            上一步
+          </button>
+          <button className="next">確認下單</button>
+        </section>
+      )}
     </StyledControl>
   );
-}
+};
 
-export default ProgressControl
+export default ProgressControl;

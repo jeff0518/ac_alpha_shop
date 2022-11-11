@@ -72,7 +72,7 @@ const StyledStepProgressContainer = styled.div`
   }
 `;
 
-const StepProgress = () => {
+const StepProgress = ({ step }) => {
   return (
     <StyledStepProgressContainer>
       <h2>結帳</h2>
@@ -94,7 +94,9 @@ const StepProgress = () => {
           <span className="progress-icon">
             <span className="text">
               <img
-                src="/icons/Number2.svg"
+                src={
+                  step >= 2 ? "/icons/baselineCheck.svg" : "/icons/Number2.svg"
+                }
                 alt=""
                 className="progress-icon-img"
               />
@@ -107,7 +109,9 @@ const StepProgress = () => {
           <span className="progress-icon">
             <span className="text">
               <img
-                src="/icons/Number3.svg"
+                src={
+                  step === 3 ? "/icons/baselineCheck.svg" : "/icons/Number3.svg"
+                }
                 alt=""
                 className="progress-icon-img"
               />
@@ -120,5 +124,4 @@ const StepProgress = () => {
   );
 };
 
-
-export default StepProgress
+export default StepProgress;

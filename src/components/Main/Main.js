@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Step1 from './Steps/Step1'
+import From from "./Steps/From";
 import StepProgress from './Steps/StepProgress'
 import ProgressControl from './Steps/ProgressControl'
 import Cart from "./Cart/Cart";
@@ -66,13 +66,14 @@ const MainRWDStyled = styled.main`
 `;
 
 const Main = () => {
+  const [step, setStep] = useState(1)
   return (
     <>
       <MainStyled>
         <div className="left-Container">
-          <StepProgress />
-          <Step1 />
-          <ProgressControl />
+          <StepProgress step={step} />
+          <From step={step} />
+          <ProgressControl step={step} setStep={setStep} />
         </div>
         <div className="right-Container">
           <Cart />
@@ -81,13 +82,13 @@ const Main = () => {
       <MainRWDStyled>
         <div className="step-container">
           <StepProgress />
-          <Step1 />
+          <From step={step} />
         </div>
         <div className="cart-container">
           <Cart />
         </div>
         <div className="button">
-          <ProgressControl />
+          <ProgressControl step={setStep} />
         </div>
       </MainRWDStyled>
     </>

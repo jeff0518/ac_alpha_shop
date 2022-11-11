@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Product from "./Product";
 import styled from "styled-components";
 
@@ -28,55 +28,59 @@ const StyledSectionCart = styled.section`
   }
 `;
 
+// const PRODUCTS = [
+//   {
+//     id: "1",
+//     name: "貓咪罐罐",
+//     img: "https://picsum.photos/300/300?text=1",
+//     price: 100,
+//     quantity: 2,
+//   },
+//   {
+//     id: "2",
+//     name: "貓咪干干",
+//     img: "https://picsum.photos/300/300?text=2",
+//     price: 200,
+//     quantity: 1,
+//   },
+// ];
+
 const PRODUCTS = [
   {
-    id: "1",
-    name: "貓咪罐罐",
-    img: "https://picsum.photos/300/300?text=1",
-    price: 100,
-    quantity: 2,
+    id: 1,
+    name: "破壞補丁修身牛仔褲",
+    price: 3999,
+    image: "/icons/Destroy.svg",
+    quantity: 1,
   },
   {
-    id: "2",
-    name: "貓咪干干",
-    img: "https://picsum.photos/300/300?text=2",
-    price: 200,
+    id: 2,
+    name: "刷色直筒牛仔褲",
+    price: 1299,
+    image: "/icons/Straight.svg",
     quantity: 1,
   },
 ];
 
-// const PRODUCTS = [
-//   {
-//     id: 1,
-//     name: "破壞補丁修身牛仔褲",
-//     price: 3999,
-//     image: "/icons/Destroy.svg",
-//   },
-//   {
-//     id: 2,
-//     name: "刷色直筒牛仔褲",
-//     price: 1299,
-//     image: "/icons/Straight.svg",
-//   },
-// ];
-
 const Cart = () => {
+  const [count, setCount] = useState(0)
+  let sum = 0
+  sum += count
   // 為了計算價錢
-  let count = 0
   return (
     <StyledSectionCart>
       <h3 className="cart-title">購物籃</h3>
       <section>
         {/* 因為格式都一樣只有文字跟圖片不同，所以用渲染的方式 */}
         {PRODUCTS.map((e) => {
-          count += e.price * e.quantity; 
           return (
             <Product
               key={e.id}
               price={e.price}
-              image={e.img}
+              image={e.image}
               name={e.name}
               quantity={e.quantity}
+              func={setCount}
             />
           );
         })}
@@ -87,7 +91,7 @@ const Cart = () => {
       </section>
       <section className="cart-info total">
         <div className="text">小計</div>
-        <div className="price">${count}</div>
+        <div className="price">{sum}</div>
       </section>
     </StyledSectionCart>
   );

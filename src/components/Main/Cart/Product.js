@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+
 import "../../../sass/BaseStyled.css";
 
 const StyledProductContainer = styled.div`
@@ -78,27 +79,56 @@ const StyledProductContainer = styled.div`
 `;
 
 const Product = (props) => {
-  return (
-    <StyledProductContainer data-count="0" data-price="3999">
-      <img className="img-container" src={props.image} />
-      <div className="product-info">
-        <div className="product-name">{props.name}</div>
-        {/* <div className="product-control-container"> */}
-        <div className="product-control">
-          <div className="product-action" href="#">
-            <img src="icons/IconMinus.svg" alt="" className="minus" />
+  // 新增 State，初始值由props提供
+  const [isQuantity, setIsQuantity] = useState(props.quantity);
+  // 因為噴error 按照stack overflow上面建議填寫（未搞懂）
+  useEffect(() => {
+    props.func(props.price * isQuantity);
+  }, []);
+  function handleQuantityMinus() {
+    setIsQuantity((quantityMinus) => quantityMinus - 1);
+  }
+
+  function handleQuantityPlus() {
+    setIsQuantity((quantityPlus) => quantityPlus + 1);
+  }
+
+  function judge() {
+    if (isQuantity > 0) {
+      return (
+        <StyledProductContainer data-count="0" data-price="3999">
+          <img className="img-container" src={props.image} alt="" />
+          <div className="product-info">
+            <div className="product-name">{props.name}</div>
+            <div className="product-control">
+              <div className="product-action" href="#">
+                <img
+                  src="icons/IconMinus.svg"
+                  alt=""
+                  className="minus"
+                  onClick={handleQuantityMinus}
+                />
+              </div>
+              <span className="product-count">{isQuantity}</span>
+              <div className="product-action" href="#">
+                <img
+                  src="/icons/IconPlus.svg"
+                  alt=""
+                  className="plus"
+                  onClick={handleQuantityPlus}
+                />
+              </div>
+            </div>
+            <div className="price rwd-price">{props.price}</div>
           </div>
-          <span className="product-count">{props.quantity}</span>
-          <div className="product-action" href="#">
-            <img src="/icons/IconPlus.svg" alt="" className="plus" />
-          </div>
-        </div>
-        <div className="price rwd-price">{props.price}</div>
-        {/* </div> */}
-      </div>
-      <div className="price">{props.price}</div>
-    </StyledProductContainer>
-  );
+          <div className="price">{props.price * isQuantity}</div>
+        </StyledProductContainer>
+      );
+    } else {
+      return <></>;
+    }
+  }
+  return <>{judge()}</>;
 };
 
 export default Product;
