@@ -81,16 +81,16 @@ const StyledProductContainer = styled.div`
 const Product = (props) => {
   // 新增 State，初始值由props提供
   const [isQuantity, setIsQuantity] = useState(props.quantity);
-  // 因為噴error 按照stack overflow上面建議填寫（未搞懂）
-  useEffect(() => {
-    props.func(props.price * isQuantity);
-  }, []);
+
   function handleQuantityMinus() {
-    setIsQuantity((quantityMinus) => quantityMinus - 1);
+    setIsQuantity((quantityMinus) => quantityMinus - 1);  
+    props.func((total) => total - props.price);
+    
   }
 
   function handleQuantityPlus() {
     setIsQuantity((quantityPlus) => quantityPlus + 1);
+    props.func((total) => total + props.price);
   }
 
   function judge() {

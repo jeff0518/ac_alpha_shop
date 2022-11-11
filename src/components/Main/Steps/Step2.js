@@ -67,7 +67,7 @@ const Step2 = () => {
               defaultChecked
             />
             <div className="radio-info">
-              <div className='radio-info-content'>
+              <div className="radio-info-content">
                 <div className="text">標準運送</div>
                 <div className="price">免費</div>
               </div>
@@ -75,7 +75,7 @@ const Step2 = () => {
             </div>
             <div className="radio-box-border"></div>
           </label>
-          <label className="radio-group" data-price="500">
+          <label className="radio-group" data-price="500" >
             <input id="shipping-dhl" type="radio" name="shipping" />
             <div className="radio-info">
               <div className="radio-info-content">

@@ -63,9 +63,8 @@ const PRODUCTS = [
 ];
 
 const Cart = () => {
-  const [count, setCount] = useState(0)
-  let sum = 0
-  sum += count
+  const [count, setCount] = useState(0);
+  let isTotal = 0;
   // 為了計算價錢
   return (
     <StyledSectionCart>
@@ -73,6 +72,7 @@ const Cart = () => {
       <section>
         {/* 因為格式都一樣只有文字跟圖片不同，所以用渲染的方式 */}
         {PRODUCTS.map((e) => {
+          isTotal += e.price * e.quantity;
           return (
             <Product
               key={e.id}
@@ -91,10 +91,10 @@ const Cart = () => {
       </section>
       <section className="cart-info total">
         <div className="text">小計</div>
-        <div className="price">{sum}</div>
+        <div className="price">{isTotal + count}</div>
       </section>
     </StyledSectionCart>
   );
-}
+};
 
-export default Cart
+export default Cart;
