@@ -129,6 +129,7 @@ const StyledStepContent = styled.div`
           }
 
           .input-rwd {
+            
             width: 183px;
           }
 
@@ -137,6 +138,7 @@ const StyledStepContent = styled.div`
               margin: 8px 30px 0 0;
               padding-left: 16px;
               width: 133px;
+
               option {
                 color: var(--input-text);
                 background-color: var(--background-color);
