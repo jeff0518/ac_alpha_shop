@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import '../../sass/BaseStyled.css'
+import "../../sass/BaseStyled.css";
 
-const Nav = styled.nav`
+const StyledNav = styled.nav`
   .nav-list {
     display: flex;
 
@@ -27,36 +27,36 @@ const Nav = styled.nav`
 
 const Menu = () => {
   return (
-    <Nav>
+    <StyledNav>
       <ul className="nav-list">
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <div className="nav-link" href="#">
             男款
-          </a>
+          </div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <div className="nav-link" href="#">
             女款
-          </a>
+          </div>
         </li>
         <li className="nav-item nav-item-fourWord">
-          <a className="nav-link" href="#">
+          <div className="nav-link" href="#">
             最新消息
-          </a>
+          </div>
         </li>
         <li className="nav-item nav-item-fourWord">
-          <a className="nav-link" href="#">
+          <div className="nav-link" href="#">
             客製商品
-          </a>
+          </div>
         </li>
         <li className="nav-item nav-item-fourWord">
-          <a className="nav-link" href="#">
+          <div className="nav-link" href="#">
             聯絡我們
-          </a>
+          </div>
         </li>
       </ul>
-    </Nav>
+    </StyledNav>
   );
-}
+};
 
-export default Menu
+export default Menu;

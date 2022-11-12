@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import IconPlus from '../../icons/IconPlus.svg'
-import IconMinus from '../../icons/IconMinus.svg'
-import '../../../sass/BaseStyled.css'
 
-const ProductContainer = styled.div`
+import "../../../sass/BaseStyled.css";
+
+const StyledProductContainer = styled.div`
   width: 392px;
   height: 102px;
   display: flex;
@@ -12,7 +11,7 @@ const ProductContainer = styled.div`
   margin-top: 34px;
 
   .img-container {
-    margin-right: 21px;
+    margin-right: 5.3%;
     width: 100px;
     height: 100px;
   }
@@ -42,6 +41,9 @@ const ProductContainer = styled.div`
         text-align: center;
       }
     }
+    .rwd-price {
+      display: none;
+    }
   }
 
   .price {
@@ -53,30 +55,80 @@ const ProductContainer = styled.div`
     text-align: right;
     color: var(--product-action-text);
   }
+
+  @media (max-width: 496px) {
+    .product-info {
+      display: flex;
+      align-items: flex-end;
+
+      .product-name {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .rwd-price {
+        display: unset;
+        margin-top: 17px;
+      }
+    }
+
+    .price {
+      display: none;
+    }
+  }
 `;
 
-
 const Product = (props) => {
-  return (
-    <ProductContainer data-count="0" data-price="3999">
-      <img className="img-container" src={props.image} />
-      <div className="product-info">
-        <div className="product-name">{props.name}</div>
-        {/* <div className="product-control-container"> */}
-        <div className="product-control">
-          <a className="product-action" href="#">
-            <img src={IconMinus} alt="" className="minus" />
-          </a>
-          <span className="product-count">1</span>
-          <a className="product-action" href="#">
-            <img src={IconPlus} alt="" className="plus" />
-          </a>
-        </div>
-        {/* </div> */}
-      </div>
-      <div className="price">{props.price}</div>
-    </ProductContainer>
-  );
-}
+  // 新增 State，初始值由props提供
+  const [isQuantity, setIsQuantity] = useState(props.quantity);
 
-export default Product
+  function handleQuantityMinus() {
+    setIsQuantity((quantityMinus) => quantityMinus - 1);  
+    props.func((total) => total - props.price);
+    
+  }
+
+  function handleQuantityPlus() {
+    setIsQuantity((quantityPlus) => quantityPlus + 1);
+    props.func((total) => total + props.price);
+  }
+
+  function judge() {
+    if (isQuantity > 0) {
+      return (
+        <StyledProductContainer data-count="0" data-price="3999">
+          <img className="img-container" src={props.image} alt="" />
+          <div className="product-info">
+            <div className="product-name">{props.name}</div>
+            <div className="product-control">
+              <div className="product-action" href="#">
+                <img
+                  src="icons/IconMinus.svg"
+                  alt=""
+                  className="minus"
+                  onClick={handleQuantityMinus}
+                />
+              </div>
+              <span className="product-count">{isQuantity}</span>
+              <div className="product-action" href="#">
+                <img
+                  src="/icons/IconPlus.svg"
+                  alt=""
+                  className="plus"
+                  onClick={handleQuantityPlus}
+                />
+              </div>
+            </div>
+            <div className="price rwd-price">{props.price}</div>
+          </div>
+          <div className="price">{props.price * isQuantity}</div>
+        </StyledProductContainer>
+      );
+    } else {
+      return <></>;
+    }
+  }
+  return <>{judge()}</>;
+};
+
+export default Product;

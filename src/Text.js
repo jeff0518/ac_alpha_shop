@@ -1,4 +1,4 @@
-import Cart from "./components/Main/Cart/Cart";
+import Hamburger from "./components/Header/Hamburger";
 import styled from "styled-components"
 
 
@@ -6,7 +6,7 @@ import styled from "styled-components"
 const Text = () => {
   return (
     <>
-      <Cart />
+      <Hamburger />
     </>
   );
 }

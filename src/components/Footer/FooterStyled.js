@@ -25,4 +25,6 @@ const FooterSection = styled.section`
   }
 `;
 
+
+
 export default FooterSection;

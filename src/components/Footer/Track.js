@@ -1,27 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import FooterSection from "./FooterStyled";
-import SocialMedia from "../icons/SocialMediaIcon.svg";
 
-const Section = styled(FooterSection)`
+
+const StyledSection = styled(FooterSection)`
   width: 199px;
 `;
 
 const Track = () => {
   return (
-    <Section>
+    <StyledSection>
       <h2 className="section-title">追蹤 ALPHA Shop</h2>
       <div className="section-content">
-        <a className="page-link" href="#">
+        <div className="page-link" href="#">
           +886 02123-45678
-        </a>
+        </div>
         <div>
-          <a className="page-link" href="#">
-            <img src={SocialMedia} className="page-link-app" alt="App" />
-          </a>
+          <div className="page-link" href="#">
+            <img
+              src="/icons/SocialMediaIcon.svg"
+              className="page-link-app"
+              alt="App"
+            />
+          </div>
         </div>
       </div>
-    </Section>
+    </StyledSection>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StepContent = styled.div`
+const StyledStepContent = styled.div`
   margin-top: 64px;
   width: 540px;
 
@@ -41,11 +41,24 @@ const StepContent = styled.div`
       }
     }
   }
+  @media (max-width: 600px) {
+    form {
+      .form-body {
+        .verify-data {
+          .input-group {
+            input {
+              width: 158px;
+            }
+          }
+        }
+      }
+    }
+  }
 `;
 
 const Step3 = () => {
   return (
-    <StepContent>
+    <StyledStepContent>
       <form data-phase="credit-card">
         <h3 className="form-title">付款資訊</h3>
         <section className="form-body">
@@ -73,8 +86,8 @@ const Step3 = () => {
           </div>
         </section>
       </form>
-    </StepContent>
+    </StyledStepContent>
   );
-}
+};
 
-export default Step3
+export default Step3;
